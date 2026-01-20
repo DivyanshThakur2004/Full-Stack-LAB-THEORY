@@ -1,0 +1,31 @@
+<input type="text" placeholder="Enter your name"><br><br>
+<input type="password" placeholder="Enter password"><br><br>
+//Hides characters for sensitive data.
+<input type="email" placeholder="Enter email" required>
+//Validates email format automatically.<br><br>
+<input type="number" min="1" max="100" placeholder="Enter age">
+//Accepts only numeric values.<br><br>
+//Provides a calendar for date selection.<br><br>
+Selecyt date: <input type="date" id="datePicker">
+<script>
+    document.getElementById('datePicker').addEventListener('change', function() {
+        document.getElementById('selectedDate').textContent = this.value;
+    });
+</script>
+<span id="selectedDate"></span><br><br>
+<input type="time"> //Allows selection of time.<br><br>
+selected time<span id="timeValue"></span><br><br>
+<script>
+    document.querySelector('input[type="time"]').addEventListener('change', function() {
+        document.getElementById('timeValue').textContent = this.value;
+    });
+</script>
+<input type="color" id="colorPicker"> //Opens a color picker dialog.<br>
+Selected color: <span id="colorValue">#000000</span><br><br>
+<script>
+    document.getElementById('colorPicker').addEventListener('change', function() {
+        document.getElementById('colorValue').textContent = this.value;
+    });
+</script>
+<input type="range" min="0" max="100">//Creates a slider control for numeric range.<br><br>
+<input type="file">//Allows file upload.<br><br>
