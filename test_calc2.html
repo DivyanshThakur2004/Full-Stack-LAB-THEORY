@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Basic Calculator</title>
+</head>
+<body>
+
+    <label for="firstnum">Enter First Number:</label>
+    <input type="number" id="firstnum" required>
+
+    <br><br>
+
+    <label for="secondnum">Enter Second Number:</label>
+    <input type="number" id="secondnum" required>
+
+    <br><br>
+
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Subtract</button>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="div()">Divide</button>
+
+    <br><br>
+
+    <h3>Result: <span id="result">---</span></h3>
+    
+    <script>
+        function getValues() {
+            let a = Number(document.getElementById("firstnum").value);
+            let b = Number(document.getElementById("secondnum").value);
+            return { a, b };
+        }
+
+        function add() {
+            let { a, b } = getValues();
+            document.getElementById("result").innerText = a + b;
+        }
+
+        function sub() {
+            let { a, b } = getValues();
+            document.getElementById("result").innerText = a - b;
+        }
+
+        function mul() {
+            let { a, b } = getValues();
+            document.getElementById("result").innerText = a * b;
+        }
+
+        function div() {
+            let { a, b } = getValues();
+            document.getElementById("result").innerText =
+                b === 0 ? "Cannot divide by 0" : a / b;
+        }
+    </script>
+
+</body>
+</html>
