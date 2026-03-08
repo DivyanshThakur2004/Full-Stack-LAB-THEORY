@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Age Finder</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <label>Your age is:</label>
+        <input type="text" id="dd" readonly>
+        <script>
+            let a = prompt("Please Enter your Date of Birth:");
+            function age()
+            {
+                let today=new Date();
+                let birth=new Date(a);
+                let age = today.getFullYear() - birth.getFullYear();
+                let month = today.getMonth() - birth.getMonth();
+                if(month<0 || (today.getDate() < birth.getDate())){
+                    --age;
+                }
+                alert("So Your Age is " + age + "Years and " + month + " Months");
+            }
+            age();
+        </script>
+    </body>
+</html>

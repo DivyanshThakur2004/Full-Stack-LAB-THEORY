@@ -1,0 +1,49 @@
+body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    
+}
+
+.body{
+    border:1px solid black;
+    border-radius:10px;
+    width:500px;
+    padding:20px
+}
+
+.body >img{
+    display:block;
+    border-radius:10px;
+    margin:0 auto;
+    margin-top:45px;
+}
+.body > p{
+    padding:20px;
+}
+.body > h2 {
+    padding:20px;
+}
+
+.lang{
+    display:inline-block;
+    border:1px solid grey;
+    border-radius:10px;
+    width:100px;
+    text-align:center;
+    margin-left:10px;
+    margin-top:10px;
+}
+
+.read{
+    display:flex;
+    background-color:lightblue;
+    border-radius:10px;
+    width:100px;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    margin-bottom:30px;
+    color:blue;
+}
