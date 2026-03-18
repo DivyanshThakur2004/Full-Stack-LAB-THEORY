@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice question 1</title>
+        <meta charset="UTF-8">
+        <style>  
+            body{
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                flex-direction:column;
+                height:100vh;
+            }
+            .box{
+                border:none;
+                padding:10px;
+                border-radius:10px;
+                box-shadow:5px 5px 100px rgb(13, 185, 28);
+            }
+            h2{
+                color:rgb(23, 141, 68)
+            }
+            button{
+                margin-left:55px;
+                border-radius:10px;
+                border:none;
+                background-color:aqua;
+                box-shadow:2px 2px 5px green;
+                transition:transform 0.5s;
+            }
+            button:hover{
+                background-color:grey;
+                transform:scale(1.5);
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Array Editor</h2>
+        <br><br>
+        <br>
+        <div class="box">
+        <input type="text" id="in" placeholder="Enter Array with one space in between">
+        <br><br>
+        <button onclick="finding()">click me</button>
+        <br><br>
+        <input type="text" id="out" placeholder="Output will be shown here" readonly>
+        </div>
+        <script>
+            function finding(){
+                let arr = document.getElementById("in").value;
+                let arr1 = arr.split(" ").map(Number).filter(x => !isNaN(x));
+                let s = [...new set(arr1)];
+                let s1 = s.map(x => x*x);
+                let s2 = s1.filter(x => x>50);
+                let s3 = s2.sort((a,b) => a-b);
+                document.getElementById("out").value = s3.join(" | ");
+            }
+        </script>
+    </body>
+</html>
