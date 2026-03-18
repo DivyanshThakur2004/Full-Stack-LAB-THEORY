@@ -49,7 +49,7 @@
             function finding(){
                 let arr = document.getElementById("in").value;
                 let arr1 = arr.split(" ").map(Number).filter(x => !isNaN(x));
-                let s = [...new set(arr1)];
+                let s = [...new Set(arr1)];
                 let s1 = s.map(x => x*x);
                 let s2 = s1.filter(x => x>50);
                 let s3 = s2.sort((a,b) => a-b);
